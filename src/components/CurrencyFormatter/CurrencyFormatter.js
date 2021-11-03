@@ -6,6 +6,8 @@ function CurrencyFormatter(event) {
   const [valorAenviar, setValorAenviar] = useState("");
 
   function mudaValor(event) {
+    console.log(event.target.value + ' ooo')
+    if(event.target.value.length < 1) {return}
     console.log(event.target.value);
     setValorInput(event.target.value);
   }

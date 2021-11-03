@@ -1,6 +1,7 @@
 function Convert(props) {
   console.log("props.valor: " + JSON.stringify(props));
   function Formatter(valor) {
+    // cria uma variável tipo string e armazenar nela o valor do parâmetro "valor" convertido para string
     let paramToString = valor.toString();
     if (paramToString.includes(".")) {
       if (paramToString.split(".")[1].length === 1) {
@@ -17,7 +18,7 @@ function Convert(props) {
         return paramToString;
       }
     } else {
-      // cria uma variável tipo string e armazena nela o valor de “param”, convertido para string
+      // cria uma variável tipo string e armazenar nela o valor do parâmetro "valor" convertido para string
       let paramToString = valor.toString();
       console.log(paramToString); // resultado: '125’
       //paramToString = paramToString + ",00";
