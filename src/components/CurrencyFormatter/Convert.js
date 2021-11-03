@@ -6,19 +6,22 @@ function Convert(props) {
       if (paramToString.split(".")[1].length === 1) {
         let paramToStringArr = paramToString.split(".");
         let decimalPartString = parseInt(paramToStringArr[1]) * 10;
-        paramToString = paramToStringArr[0] + "," + parseInt(decimalPartString);
+        paramToString = `R$ ${paramToStringArr[0]},${parseInt(
+          decimalPartString
+        )}`;
         return paramToString;
       }
       if (paramToString.split(".")[1].length === 2) {
         let paramToStringArr = paramToString.split(".");
-        paramToString = paramToStringArr[0] + "," + paramToStringArr[1];
+        paramToString = `R$ ${paramToStringArr[0]},${paramToStringArr[1]}`;
         return paramToString;
       }
     } else {
       // cria uma variável tipo string e armazena nela o valor de “param”, convertido para string
       let paramToString = valor.toString();
       console.log(paramToString); // resultado: '125’
-      paramToString = paramToString + ",00";
+      //paramToString = paramToString + ",00";
+      paramToString = `R$ ${paramToString},00`;
       return paramToString;
     }
   }
